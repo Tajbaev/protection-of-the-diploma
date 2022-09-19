@@ -9,3 +9,10 @@ class MainView(ListView):
     template_name = 'index.html'
     model = CommentModel
     context_object_name = 'comment'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(MainView, self).get_context_data(**kwargs)
+        context['users_comment'] = CommentFromUsers.objects.all()
+
+        return context
+

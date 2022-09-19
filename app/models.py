@@ -14,3 +14,10 @@ class CommentModel(models.Model):
     class Meta:
         verbose_name = 'Comment'
         verbose_name_plural = 'Comments'
+
+class CommentFromUsers(models.Model):
+    name = models.CharField('Name', max_length=100)
+    content = models.TextField('Content', max_length=250)
+    img = models.ImageField('Image', upload_to='comment_from_users/')
+    work = models.CharField('Work', max_length=100)
+    
