@@ -92,3 +92,7 @@ class Design_projectsModelaaaaa(models.Model):
     class Meta:
         verbose_name = 'Design projects'
         verbose_name_plural = 'Design projects'
+
+    class Metaaa:
+        verbose_name = 'Design projects'
+        verbose_name_plural = 'Design projects'
