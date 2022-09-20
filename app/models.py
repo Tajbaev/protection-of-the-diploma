@@ -80,3 +80,15 @@ class Design_projectsModel(models.Model):
     class Meta:
         verbose_name = 'Design projects'
         verbose_name_plural = 'Design projects'
+
+class Design_projectsModelaaaaa(models.Model):
+    img = models.ImageField('Image', upload_to='design_projects/')
+    name = models.CharField('Name', max_length=100)
+    category = models.ForeignKey(Cat, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Design projects'
+        verbose_name_plural = 'Design projects'
